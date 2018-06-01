@@ -1,5 +1,12 @@
 // business end
+function randomResult() {
+  var resultArray = ["1", "2", "3"]
+  var resultNumber = resultArray[Math.floor(Math.random() * resultArray.length)];
+  $("#result" + resultNumber).show();
+  }
+
 function checkForm() {
+
   var question1 = $("input:radio[name=question1]:checked").val();
   var question2 = $("input:radio[name=question2]:checked").val();
   var question3 = $("#question3").val();
@@ -13,7 +20,7 @@ function checkForm() {
   } else if (question1 === "c" && question2 === "a" && question3 === "1" && question5 === "a") {
     $("#result3").show();
   } else {
-    $("#result1").show();
+    randomResult();
   }
 }
 
