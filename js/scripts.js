@@ -6,12 +6,14 @@ function checkForm() {
   var question4 = $("#question4").val();
   var question5 = $("input:radio[name=question5]:checked").val();
 
-  if (question1 === "a" && question2 === "b" && question3 === "3" && (question4.length > 5) && question5 === "c") {
+  if (question1 === "a" && question2 === "b" && question3 === "3" && (question4.length < 10) && question5 === "c") {
     $("#result1").show();
-  // } else if {
-  //
-  // } else {
-
+  } else if (question1 === "b" && question2 ==="c" && question3 === "2" && (question4.length > 20) && question5 === "b") {
+    $("#reseult2").show();
+  } else if (question1 === "c" && question2 === "a" && question3 === "1" && question5 === "a") {
+    $("#result3").show();
+  } else {
+    $("#result1").show();
   }
 }
 
