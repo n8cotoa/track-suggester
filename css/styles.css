@@ -1,9 +1,20 @@
+.jumbotron {
+  background-image: url(../img/grey.png);
+  border-bottom: 2px solid gray;
+}
+
 .jumbotron h1 {
   text-align: center;
   text-transform: uppercase;
+  font-weight: bolder;
   font-size: 4rem;
   width: 80%;
   margin: 20px auto;
+}
+
+.panel-heading {
+  background-image: url(../img/grey.png);
+  border-bottom: 2px solid gray;
 }
 
 .radio-btn input {
@@ -14,11 +25,33 @@
   margin-bottom: 30px;
 }
 
-.container h3 {
+.container h3, {
   text-align: center;
   margin-bottom: 30px;
 }
 
 #result1, #result2, #result3 {
  display: none;
+}
+
+.result-div h3 {
+  margin-bottom: 15px;
+}
+
+.result-div h3, .result-div h4 {
+  text-align: center;
+}
+
+.result-div p {
+  padding: 5px 15px
+}
+
+.result-footer {
+  background: -moz-linear-gradient(0deg, #42C0C9 0, #FFFFFF 74%);/* FF3.6+ */
+background: -webkit-gradient(linear, 0deg, color-stop(0, 42C0C9), color-stop(74%, FFFFFF));/* Chrome,Safari4+ */
+background: -webkit-linear-gradient(0deg, #42C0C9 0, #FFFFFF 74%);/* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(0deg, #42C0C9 0, #FFFFFF 74%);/* Opera 11.10+ */
+background: -ms-linear-gradient(0deg, #42C0C9 0, #FFFFFF 74%);/* IE10+ */
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1'); /* for IE */
+background: linear-gradient(0deg, #42C0C9 0, #FFFFFF 74%);/* W3C */
 }
