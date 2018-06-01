@@ -28,11 +28,56 @@
         <h2 class="panel-title">So you want to learn how to program?</h2>
       </div>
       <div class="panel-body">
+<!-- form start -->
         <form id="formOne">
           <div class="form-group">
-            <p>First, lets start with some basic information about you:</p>
+            <h4>First, lets start with some basic information about you:</h4>
             <label for="name">Your Name</label>
-            <input id="name" class="form-control" type="text" name="name" >
+            <input id="name" class="form-control" type="text">
+          </div>
+          <div class="form-group radio-btn">
+            <h4>Now some other questions about you:</h4>
+            <p>Question 1</p>
+            <label>
+              <input type="radio" name="question1" value="a" checked>
+              placeholder
+            </label>
+            <label>
+              <input type="radio" name="question1" value="b">
+              placeholder
+            </label>
+            <label>
+              <input type="radio" name="question1" value="c">
+              placeholder
+            </label>
+          </div>
+          <div class="form-group radio-btn">
+            <p>Question 2</p>
+            <label>
+              <input type="radio" name="question2" value="a" checked>
+              placeholder
+            </label>
+            <label>
+              <input type="radio" name="question2" value="b">
+              placeholder
+            </label>
+            <label>
+              <input type="radio" name="question2" value="c">
+              placeholder
+            </label>
+          </div>
+          <div class="form-group">
+            <p>Question 3</p>
+            <select id="question3" class="form-control">
+              <option value="1"></option>
+              <option value="2"></option>
+              <option value="3"></option>
+              <option value="4"></option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="question4">What is your favorite movie?</label>
+            <input id="question4" class="form-control" type="text">
           </div>
         </form>
       </div>
