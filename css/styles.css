@@ -1,6 +1,3 @@
-body {
-  background-color:
-}
 
 .jumbotron {
   background-image: url(../img/grey.png);
@@ -21,13 +18,19 @@ body {
   border-bottom: 2px solid gray;
 }
 
+.well {
+  background-image: url(../img/blackorchid.png);
+  color: white;
+  border: 2px solid black;
+}
+
 .radio-btn input {
   margin-left: 10px;
 }
 
 .btn-success {
   background-color: #afd275;
-  color: #7e685a;
+  color: white;
 }
 
 .btn-danger {

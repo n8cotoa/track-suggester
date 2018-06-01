@@ -70,11 +70,6 @@ function enableAllBtns() {
 
 // user end
 $(document).ready(function() {
-  // var question1 = $("input:radio[name=question1]:checked").val();
-  // var question2 = $("input:radio[name=question2]:checked").val();
-  // var question3 = $("#question3").val();
-  // var question4 = $("#question4").val();
-  // var question5 = $("input:radio[name=question5]:checked").val();
   disableAllBtns();
 
   $("#name, input[name=question1], input[name=question2], #question3, #question4, input[name=question5]").keyup(function() {
@@ -90,6 +85,7 @@ $(document).ready(function() {
 
   $("#reset").click(function(e) {
     e.preventDefault();
+
     location.reload();
     // clearForm();
   });
