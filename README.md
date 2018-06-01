@@ -17,7 +17,7 @@ A simple webpage that takes user input through a form and suggests which program
 
 ## Known Bugs
 
-No known bugs.
+* Reset button resets form properly, but causes another function to stack h4 elements with multiple form submissions. Currently disabled.
 
 ## Technologies Used
 
