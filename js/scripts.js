@@ -7,13 +7,14 @@ function randomResult () {
   $('#result'+ resultNumber).scrollView();
   }
 
-  $.fn.scrollView = function () {
-  return this.each(function () {
+
+  $.fn.scrollView = function() {
+  return this.each(function() {
     $('html, body').animate({
       scrollTop: $(this).offset().top
     }, 1000);
-  });
-}
+    });
+  }
 
 function checkForm() {
   var name = $("#name").val();
@@ -22,22 +23,22 @@ function checkForm() {
   var question3 = $("#question3").val();
   var question4 = $("#question4").val();
   var question5 = $("input:radio[name=question5]:checked").val();
+  var sum = parseInt(question1) + parseInt(question2) + parseInt(question3) + parseInt(question5);
 
-  if (question1 === "a" && question2 === "b" && question3 === "3" && (question4.length < 10) && question5 === "c") {
+
+  if (sum < 5) {
     $("#result1").show();
-    $('#result1').scrollView();
-
-  } else if (question1 === "b" && question2 ==="c" && question3 === "2" && (question4.length > 20) && question5 === "b") {
-    $("#reseult2").show();
-    $('#result2').scrollView();
-  } else if (question1 === "c" && question2 === "a" && question3 === "1" && question5 === "a") {
-    $("#result3").show();
-    $('#result3').scrollView();
+  } else if (sum > 6 && sum < 10) {
+    $("#result2").show();
   } else {
-    randomResult();
-    $("div#addName").prepend("<h4>Hey! " + name + ", you should try:</h4>");
+    $("#result3").show();
   }
+  $("#result").show();
+  $('#result').scrollView();
+  $("#addName").prepend(name);
 }
+
+
 
 function inputHasValues() {
   if ( $("#name").val() && $("input:radio[name=question1]").val() && $("input:radio[name=question2]").val() && $("#question3").val() && $("#question4").val() && $("input:radio[name=question5]").val() ) {
@@ -56,17 +57,22 @@ function enableAllBtns() {
 }
 
 
-// function clearForm() {
-//   $("#name").val("");
-//   $("input[name=question1]").prop("checked", false);
-//   $("input[name=question2]").prop("checked", false);
-//   $("#question3").prop("selectedIndex", 0);
-//   $("#question4").val("");
-//   $("input[name=question5]").prop("checked", false);
-//
-//   $("#result" + resultNumber).hide();
-//   $("h4#addName").hide();
-// }
+function clearForm() {
+  $("#name").val("");
+  $("input[name=question1]").prop("checked", false);
+  $("input[name=question2]").prop("checked", false);
+  $("#question3").prop("selectedIndex", 0);
+  $("#question4").val("");
+  $("input[name=question5]").prop("checked", false);
+  checkForm();
+  $("#result").hide();
+  $("#result1").hide();
+  $("#result2").hide();
+  $("#result3").hide();
+  $("#addName").empty();
+  disableAllBtns();
+
+}
 
 // user end
 $(document).ready(function() {
@@ -81,13 +87,13 @@ $(document).ready(function() {
 
     checkForm();
 
+
   });
 
   $("#reset").click(function(e) {
     e.preventDefault();
 
-    location.reload();
-    // clearForm();
+    clearForm();
   });
 
 
